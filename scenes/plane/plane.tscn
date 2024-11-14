@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cxvu2j6mvf7sa"]
 
 [ext_resource type="Script" path="res://scenes/plane/plane.gd" id="1_2rfnk"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gt1w5"]
+[ext_resource type="SpriteFrames" uid="uid://tvjqwp4o4i3m" path="res://assets/plane_frames.tres" id="2_sy48n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwmjo"]
 
@@ -10,7 +9,10 @@
 script = ExtResource("1_2rfnk")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_gt1w5")
+sprite_frames = ExtResource("2_sy48n")
+animation = &"fly"
+autoplay = "fly"
+frame_progress = 0.302502
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lwmjo")
